@@ -4,7 +4,7 @@
 /**
  * main - c program that prints a line to the standard error
  *
- * Return: 0 (Successful)
+ * Return: 1 (Successful)
  */
 int main(void)
 {
