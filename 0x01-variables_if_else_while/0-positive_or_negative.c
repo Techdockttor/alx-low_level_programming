@@ -1,4 +1,7 @@
+#include <stdlib.h>
 #include <time.h>
+#include <stdio.h>
+
 /**
  * main - generate random numbers to detect -ve or +ve
  *
@@ -23,5 +26,5 @@ int main(void)
 	{
 		printf("%d is negative\n", n);
 	}
-	return (0)
+	return (0);
 }
