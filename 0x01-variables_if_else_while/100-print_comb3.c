@@ -6,35 +6,22 @@
  * Return: 0 (Successful)
  *
  */
-
 int main(void)
 {
-	int i = '0';
-	int j = '0';
-
-	while (i <= '9')
-	{
-		while (j <= '9')
-		{
-			if (!(i > j) || i == j)
-			{
-				putchar(i);
-				putchar(j);
-				if (i == '8' && j == '9')
-				{
-					putchar('\n');
-				}
-				else
-				{
-					putchar(',');
-					putchar(',');
-				}
-			}
-	j++;
-
-		}
-	j = '0';
-	i++;
-	}
-	return (0);
+int first_digit, second_digit;
+for (first_digit = 0; first_digit <= 8; first_digit++)
+{
+for (second_digit = first_digit + 1; second_digit <= 9; second_digit++)
+{
+putchar(first_digit + '0');
+putchar(second_digit + '0');
+if (first_digit != 8 || second_digit != 9)
+{
+putchar(',');
+putchar(' ');
+}
+}
+}
+putchar('\n');
+return (0);
 }
