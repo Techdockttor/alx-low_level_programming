@@ -2,22 +2,22 @@
 /**
  * main - Entry point
  *
- * Description: Prints the alphabet in lowercase,
- *              then in uppercase, followed by a new line.
+ * Description: Prints all possible combinations of single-digit numbers.
+ * Uses putchar a maximum of four times.
  *
- * Return: Everytime 0 (Successful)
+ * Return: Always 0 (Successful)
  */
 int main(void)
 {
-char lowercase;
-char uppercase;
-for (lowercase = 'a'; lowercase <= 'z'; lowercase++)
+int digit;
+for (digit = 0; digit <= 9; digit++)
 {
-putchar(lowercase);
+putchar(digit + '0');
+if (digit != 9)
+{
+putchar(',');
+putchar(' ');
 }
-for (uppercase = 'A'; uppercase <= 'Z'; uppercase++)
-{
-putchar(uppercase);
 }
 putchar('\n');
 return (0);
