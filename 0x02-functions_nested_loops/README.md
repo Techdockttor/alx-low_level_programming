@@ -10,9 +10,6 @@
 # Introduction
 # - [Project Structure](#project-structure)
 # - [Usage](#usage)
-# - [Examples](#examples)
-# - [Contributing](#contributing)
-# - [License](#license)
 
 # Project Structure
 
@@ -49,13 +46,3 @@
 # $ gcc -o 0-holberton 0-holberton.c _putchar.c
 # $ ./0-holberton
 # Holberton
-# ```
-
-# Contributing
-
-# Contributions to this project are welcome. Feel free to fork this repository, make changes, and submit a pull request.
-
-# License
-
-# This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
-
