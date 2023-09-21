@@ -1,23 +1,24 @@
-#ifndef ROLL_H
-#define ROLL_H
+#ifndef LISTS_H
+#define LISTS_H
 
 #include <stdlib.h>
 #include <stddef.h>
 
 /**
- * struct roll_s - singly linked list
+ * struct list_s - singly linked list
  * @str: string - (malloc'ed string)
  * @len: string length
- * @next: points to the next node
+ * @next: points to next node
  *
  * Description: singly linked list node structure
  *              for 0x12-singly_linked_lists.
  */
-typedef struct roll_s
+
+typedef struct list_s
 {
 	char *str;
 	unsigned int len;
-	struct roll_s *next;
+	struct list_s *next;
 } list_t;
 
 size_t print_list(const list_t *h);
@@ -27,4 +28,3 @@ list_t *add_node_end(list_t **head, const char *str);
 void free_list(list_t *head);
 
 #endif
-
