@@ -8,36 +8,34 @@
  * @list: the old list to append
  * @size: size of the new list (always one more than the old list)
  * @new: new node to add to the list
- *
  * Return: pointer to the new list
  */
 listint_t **_ra(listint_t **list, size_t size, listint_t *new)
 {
-	listint_t **newlist;
-	size_t i;
+	listint_t **_newlistt;
+	size_t z;
 
-	newlist = malloc(size * sizeof(listint_t *));
-	if (newlist == NULL)
+	_newlistt = malloc(size * sizeof(listint_t *));
+	if (_newlistt == NULL)
 	{
 		free(list);
 		exit(98);
 	}
-	for (i = 0; i < size - 1; i++)
-		newlist[i] = list[i];
-	newlist[i] = new;
+	for (z = 0; z < size - 1; z++)
+		_newlistt[z] = list[z];
+	_newlistt[z] = new;
 	free(list);
-	return (newlist);
+	return (_newlistt);
 }
 
 /**
  * free_listint_safe - frees a listint_t linked list safely(free loops)
  * @head: double pointer to the start head address of the list
- *
  * Return: the number of nodes in the list
  */
 size_t free_listint_safe(listint_t **head)
 {
-	size_t i, num = 0;
+	size_t z, num = 0;
 	listint_t **list = NULL;
 	listint_t *next;
 
@@ -45,9 +43,9 @@ size_t free_listint_safe(listint_t **head)
 		return (num);
 	while (*head != NULL)
 	{
-		for (i = 0; i < num; i++)
+		for (z = 0; z < num; z++)
 		{
-			if (*head == list[i])
+			if (*head == list[z])
 			{
 				*head = NULL;
 				free(list);
