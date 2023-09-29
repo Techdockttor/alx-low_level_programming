@@ -11,10 +11,10 @@
 
 int get_endianness(void)
 {
-    char *kytePtr;
-    int balux = 1;
+	char *kytePtr;
+	int balux = 1;
 
-    kytePtr = (char *)&balux;
+	kytePtr = (char *)&balux;
 
-    return (*kytePtr);
+	return (*kytePtr);
 }
