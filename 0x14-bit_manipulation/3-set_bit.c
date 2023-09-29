@@ -9,13 +9,13 @@
 
 int set_bit(unsigned long int *n, unsigned int index)
 {
-        unsigned long int lay;
+	unsigned long int lay;
 
-        if (index > (sizeof(unsigned long int) * 8 - 1))
-                return (-1);
+	if (index > (sizeof(unsigned long int) * 8 - 1))
+		return (-1);
 
-        lay = 1 << index;
-        *n = *n | lay
+	lay = 1 << index;
+	*n = *n | lay
 
-        return (1);
+		return (1);
 }
