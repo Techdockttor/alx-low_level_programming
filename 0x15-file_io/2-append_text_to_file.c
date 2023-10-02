@@ -13,11 +13,11 @@
 
 size_t _strlen(char *str)
 {
-	size_t z;
+	size_t i;
 
-	for (z = 0; str[z]; z++)
+	for (i = 0; str[i]; i++)
 		;
-	return (z);
+	return (i);
 }
 
 /**
@@ -33,7 +33,7 @@ size_t _strlen(char *str)
 int append_text_to_file(const char *filename, char *text_content)
 {
 	int fd;
-	ssize_t length
+	ssize_t len;
 
 	if (filename == NULL)
 		return (-1);
@@ -41,9 +41,9 @@ int append_text_to_file(const char *filename, char *text_content)
 	if (fd == -1)
 		return (-1);
 	if (text_content != NULL)
-		length =  write(fd, text_content, _strlen(text_content));
+		len = write(fd, text_content, _strlen(text_content));
 	close(fd);
-	if (length == -1)
+	if (len == -1)
 		return (-1);
 	return (1);
 }
